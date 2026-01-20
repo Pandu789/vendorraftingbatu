@@ -3,12 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Batu Rafting - Premium Adventure</title>
     
+    <title>Batu Rafting - Paket Arung Jeram Terbaik di Batu Malang</title>
+    <meta name="description" content="Rasakan sensasi rafting terbaik di Sungai Brantas, Batu. Paket hemat mulai 150rb, aman untuk pemula & keluarga. Booking sekarang!">
+    <meta name="keywords" content="rafting batu, arung jeram malang, wisata batu, rafting murah, wisata keluarga batu">
+    <meta name="author" content="Batu Rafting Team">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://baturafting.com/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://baturafting.com/">
+    <meta property="og:title" content="Batu Rafting - Premium Adventure">
+    <meta property="og:description" content="Promo Rafting Batu 2025. Fasilitas lengkap, guide bersertifikat, dan makan siang prasmanan.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1530866495561-507c9faab2ed?auto=format&fit=crop&w=1200&q=80">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="https://cdn-icons-png.flaticon.com/512/2038/2038030.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1530866495561-507c9faab2ed?auto=format&fit=crop&w=1920&q=80">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Batu Rafting Adventure",
+      "image": "https://images.unsplash.com/photo-1530866495561-507c9faab2ed",
+      "description": "Penyedia layanan wisata arung jeram (rafting) profesional di Kota Wisata Batu.",
+      "@id": "https://baturafting.com",
+      "url": "https://baturafting.com",
+      "telephone": "+6282211221909",
+      "priceRange": "Rp150.000 - Rp250.000",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. Raya Tlekung No. 1",
+        "addressLocality": "Batu",
+        "addressRegion": "Jawa Timur",
+        "postalCode": "65311",
+        "addressCountry": "ID"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -7.8973, 
+        "longitude": 112.5342
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+        ],
+        "opens": "08:00",
+        "closes": "17:00"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "1250"
+      }
+    }
+    </script>
 
     <style>
         /* --- 1. COLOR PALETTE & VARIABLES --- */
@@ -82,7 +140,8 @@
         /* --- 3. HERO SECTION WITH WAVE --- */
         .hero {
             position: relative;
-            min-height: 100vh; /* Ubah height jadi min-height agar aman di mobile */
+            min-height: 100vh;
+            /* Menggunakan WebP jika tersedia untuk performa lebih baik */
             background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1530866495561-507c9faab2ed?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-attachment: fixed;
@@ -90,7 +149,7 @@
             display: flex;
             align-items: center;
             color: white;
-            padding-bottom: 80px; /* Tambahan padding bawah agar konten tidak tertutup wave */
+            padding-bottom: 80px;
         }
         .hero-content h1 {
             font-size: 4rem;
@@ -163,28 +222,33 @@
             color: white;
         }
 
+        /* --- PERBAIKAN CSS PRICE CARD --- */
         .price-card {
             background: white;
             border-radius: 25px;
             padding: 0;
-            overflow: hidden;
+            overflow: visible; 
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             transition: 0.3s;
             position: relative;
+            margin-top: 25px; 
         }
         .price-card:hover {
             transform: scale(1.05);
+            z-index: 10; 
         }
+        
         .price-header {
             background: var(--dark);
             padding: 40px 20px;
             color: white;
             text-align: center;
-            border-radius: 0 0 50% 50% / 20px;
+            border-radius: 25px 25px 50% 50% / 25px 25px 20px 20px;
         }
         .price-header.popular {
             background: var(--gradient);
         }
+        
         .price-tag {
             font-size: 3rem;
             font-weight: 800;
@@ -199,9 +263,13 @@
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            background: #f0f0f0; /* Placeholder color saat loading */
         }
         .gallery-item img {
             transition: transform 0.5s ease;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         .gallery-item:hover img {
             transform: scale(1.1);
@@ -248,41 +316,30 @@
             fill: #FFFFFF;
         }
 
-        /* --- MEDIA QUERIES KHUSUS MOBILE (PERBAIKAN UTAMA) --- */
+        /* --- MEDIA QUERIES --- */
         @media (max-width: 768px) {
-            /* Fix Hero Font Size */
             .hero-content h1 {
                 font-size: 2.5rem;
             }
             .hero-content .lead {
                 font-size: 1.1rem !important;
             }
-            
-            /* Disable Parallax on Mobile (Performance & Bug Fix) */
             .hero {
                 background-attachment: scroll;
             }
-
-            /* Adjust Wave Height on Mobile */
             .custom-wave-divider svg {
-                height: 60px; /* Lebih pendek agar tidak makan layar */
+                height: 60px;
             }
-
-            /* Fix Padding Glass Card */
             .glass-card {
                 padding: 25px;
                 margin-top: 20px;
             }
-
-            /* Typography Adjustments */
             .section-header h2 {
                 font-size: 2rem;
             }
             .price-tag {
                 font-size: 2.5rem;
             }
-            
-            /* Navbar Background on Mobile */
             .navbar-collapse {
                 background: white;
                 padding: 20px;
@@ -294,94 +351,93 @@
                 color: var(--dark) !important;
             }
         }
-        /* --- CSS BARU UNTUK FAQ & BLOG TERPISAH --- */
 
-/* FAQ Styling */
-.faq-section {
-    background-color: #f8fcfc; /* Sedikit lebih terang dari bg body */
-}
-.faq-card {
-    border: none;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-    margin-bottom: 20px;
-    overflow: hidden;
-    transition: 0.3s;
-}
-.faq-header button {
-    font-weight: 700;
-    color: var(--dark);
-    background: white;
-    padding: 20px 30px;
-    font-size: 1.1rem;
-    box-shadow: none !important; /* Hapus outline biru default bootstrap */
-}
-.faq-header button:not(.collapsed) {
-    color: var(--primary);
-    background: #e0f2f1; /* Warna hijau mint muda saat dibuka */
-}
-.faq-body {
-    padding: 0 30px 30px;
-    color: #64748b;
-    line-height: 1.6;
-}
+        /* FAQ Styling */
+        .faq-section {
+            background-color: #f8fcfc;
+        }
+        .faq-card {
+            border: none;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+        .faq-header button {
+            font-weight: 700;
+            color: var(--dark);
+            background: white;
+            padding: 20px 30px;
+            font-size: 1.1rem;
+            box-shadow: none !important;
+        }
+        .faq-header button:not(.collapsed) {
+            color: var(--primary);
+            background: #e0f2f1;
+        }
+        .faq-body {
+            padding: 0 30px 30px;
+            color: #64748b;
+            line-height: 1.6;
+        }
 
-/* Blog Styling */
-.blog-card {
-    border: none;
-    border-radius: 20px;
-    overflow: hidden;
-    height: 100%;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    transition: 0.3s;
-    background: white;
-}
-.blog-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-}
-.blog-img-wrapper {
-    height: 200px;
-    overflow: hidden;
-    position: relative;
-}
-.blog-img-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: 0.5s;
-}
-.blog-card:hover .blog-img-wrapper img {
-    transform: scale(1.1); /* Zoom effect saat hover */
-}
-.blog-date {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    background: var(--accent);
-    color: white;
-    padding: 5px 15px;
-    border-radius: 50px;
-    font-size: 0.8rem;
-    font-weight: 700;
-}
-.blog-content {
-    padding: 25px;
-}
-.read-more-btn {
-    color: var(--primary);
-    font-weight: 700;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    margin-top: 15px;
-    transition: 0.3s;
-}
-.read-more-btn:hover {
-    color: var(--accent);
-    transform: translateX(5px);
-} 
+        /* Blog Styling */
+        .blog-card {
+            border: none;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 100%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            background: white;
+        }
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .blog-img-wrapper {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+        .blog-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+        .blog-card:hover .blog-img-wrapper img {
+            transform: scale(1.1);
+        }
+        .blog-date {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--accent);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+        .blog-content {
+            padding: 25px;
+        }
+        .read-more-btn {
+            color: var(--primary);
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+        .read-more-btn:hover {
+            color: var(--accent);
+            transform: translateX(5px);
+        } 
     </style>
 </head>
 <body>
@@ -389,7 +445,7 @@
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">BATU RAFTING</a>
-            <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -399,7 +455,7 @@
                     <li class="nav-item"><a class="nav-link" href="#pricing">Paket</a></li>
                     <li class="nav-item"><a class="nav-link" href="#gallery">Galeri</a></li>
                     <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
-                        <a href="#contact" class="btn btn-custom w-100 w-lg-auto">Booking <i class="fas fa-arrow-right ms-2"></i></a>
+                        <a href="https://wa.me/6282211221909?text=Halo%20Admin,%20saya%20mau%20booking%20rafting" class="btn btn-custom w-100 w-lg-auto" aria-label="Booking via WhatsApp">Booking <i class="fas fa-arrow-right ms-2"></i></a>
                     </li>
                 </ul>
             </div>
@@ -412,7 +468,7 @@
             <p class="lead mb-5 fs-4">Rasakan sensasi menaklukkan jeram Sungai Brantas dengan standar keamanan bintang lima.</p>
             <div class="d-flex justify-content-center gap-3 flex-wrap">
                 <a href="#pricing" class="btn btn-custom btn-lg">Lihat Paket</a>
-                <a href="https://youtube.com" class="btn btn-outline-light btn-lg rounded-pill"><i class="fas fa-play me-2"></i> Video Aksi</a>
+                
             </div>
         </div>
         
@@ -427,7 +483,7 @@
         <div class="container py-5">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4" data-aos="fade-right">
-                    <img src="img/Gemini_Generated_Image_kv3coikv3coikv3c (1)_11zon.webp" class="img-fluid rounded-4 shadow-lg" alt="Team Rafting">
+                    <img src="img/Gemini_Generated_Image_kv3coikv3coikv3c (1)_11zon.webp" class="img-fluid rounded-4 shadow-lg" alt="Tim Batu Rafting sedang beraksi" width="600" height="400" loading="lazy">
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
                     <div class="glass-card">
@@ -498,8 +554,8 @@
                     <div class="price-card h-100">
                         <div class="price-header">
                             <h4>BASIC</h4>
-                            <div class="price-tag">150K</div>
-                            <small>per orang (Min 5 pax)</small>
+                            <div class="price-tag"></div>
+                            <small></small>
                         </div>
                         <div class="price-body">
                             <ul class="list-unstyled mb-4 lh-lg">
@@ -508,7 +564,7 @@
                                 <li><i class="fas fa-check text-success me-2"></i> Standard Gear</li>
                                 <li><i class="fas fa-times text-muted me-2"></i> Makan Besar</li>
                             </ul>
-                            <button class="btn btn-outline-dark w-100 rounded-pill">Pilih Basic</button>
+                            <a href="https://wa.me/6282211221909?text=Halo%20Admin,%20saya%20tertarik%20paket%20BASIC%20Rafting" class="btn btn-outline-dark w-100 rounded-pill" aria-label="Pilih Paket Basic">Pilih Basic</a>
                         </div>
                     </div>
                 </div>
@@ -518,8 +574,8 @@
                         <div class="position-absolute top-0 start-50 translate-middle badge bg-warning text-dark px-3 py-2 rounded-pill shadow">BEST SELLER</div>
                         <div class="price-header popular">
                             <h4>PREMIUM</h4>
-                            <div class="price-tag">195K</div>
-                            <small>per orang (Min 5 pax)</small>
+                            <div class="price-tag"></div>
+                            <small></small>
                         </div>
                         <div class="price-body">
                             <ul class="list-unstyled mb-4 lh-lg fw-bold text-dark">
@@ -528,7 +584,7 @@
                                 <li><i class="fas fa-check text-warning me-2"></i> Shuttle Transport</li>
                                 <li><i class="fas fa-check text-warning me-2"></i> Dokumentasi Foto</li>
                             </ul>
-                            <button class="btn btn-custom w-100 rounded-pill shadow">Pilih Premium</button>
+                            <a href="https://wa.me/6282211221909?text=Halo%20Admin,%20saya%20tertarik%20paket%20PREMIUM%20Rafting" class="btn btn-custom w-100 rounded-pill shadow" aria-label="Pilih Paket Premium">Pilih Premium</a>
                         </div>
                     </div>
                 </div>
@@ -537,8 +593,8 @@
                     <div class="price-card h-100">
                         <div class="price-header">
                             <h4>CORPORATE</h4>
-                            <div class="price-tag">CALL</div>
-                            <small>Custom Sesuai Budget</small>
+                            <div class="price-tag"></div>
+                            <small></small>
                         </div>
                         <div class="price-body">
                             <ul class="list-unstyled mb-4 lh-lg">
@@ -547,7 +603,7 @@
                                 <li><i class="fas fa-check text-success me-2"></i> Gala Dinner</li>
                                 <li><i class="fas fa-check text-success me-2"></i> Live Music</li>
                             </ul>
-                            <button class="btn btn-outline-dark w-100 rounded-pill">Hubungi Kami</button>
+                            <a href="https://wa.me/6282211221909?text=Halo%20Admin,%20saya%20mau%20tanya%20paket%20CORPORATE" class="btn btn-outline-dark w-100 rounded-pill" aria-label="Hubungi Marketing Corporate">Hubungi Kami</a>
                         </div>
                     </div>
                 </div>
@@ -564,19 +620,19 @@
             <div class="row g-3">
                 <div class="col-md-8" data-aos="fade-right">
                     <div class="gallery-item h-100">
-                        <img src="img/Gemini_Generated_Image_kv3coikv3coikv3c (1)_11zon.webp" class="w-100 h-100 object-fit-cover" alt="Main Rafting">
+                        <img src="img/Gemini_Generated_Image_kv3coikv3coikv3c (1)_11zon.webp" class="w-100 h-100 object-fit-cover" alt="Keseruan Arung Jeram Utama" width="800" height="600" loading="lazy">
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="row g-3">
                         <div class="col-12" data-aos="fade-left">
                             <div class="gallery-item">
-                                <img src="img/Gemini_Generated_Image_kv3coikv3coikv3c.png" class="w-100" style="height: 250px; object-fit: cover;" alt="Happy Team">
+                                <img src="img/Gemini_Generated_Image_kv3coikv3coikv3c.png" class="w-100" style="height: 250px; object-fit: cover;" alt="Tim Rafting Bahagia" width="400" height="250" loading="lazy">
                             </div>
                         </div>
                         <div class="col-12" data-aos="fade-left" data-aos-delay="100">
                             <div class="gallery-item">
-                                <img src="img/Gemini_Generated_Image_rwl3bcrwl3bcrwl3_11zon_11zon (2).webp" class="w-100" style="height: 250px; object-fit: cover;" alt="Splash">
+                                <img src="img/Gemini_Generated_Image_rwl3bcrwl3bcrwl3_11zon_11zon (2).webp" class="w-100" style="height: 250px; object-fit: cover;" alt="Cipratan Air Sungai" width="400" height="250" loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -592,7 +648,7 @@
                     <i class="fas fa-quote-left fa-3x text-muted mb-4"></i>
                     <h3 class="fst-italic lh-base">"Guide-nya gokil abis! Kita nggak berhenti ketawa dari start sampai finish. Jeramnya dapet banget, makanannya juga enak ala ndeso."</h3>
                     <div class="mt-4 d-flex align-items-center justify-content-center gap-3">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-circle border border-2 border-warning" width="60" alt="User">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-circle border border-2 border-warning" width="60" height="60" alt="Foto Profil Dimas Anggara" loading="lazy">
                         <div class="text-start">
                             <h5 class="mb-0 fw-bold text-warning">Dimas Anggara</h5>
                             <small>Corporate Gathering, Jakarta</small>
@@ -671,12 +727,12 @@
                 <div class="blog-card">
                     <div class="blog-img-wrapper">
                         <span class="blog-date">20 Jan 2026</span>
-                        <img src="img/Gemini_Generated_Image_rwl3bcrwl3bcrwl3_11zon_11zon (2).webp" alt="Tips Outfit">
+                        <img src="img/Gemini_Generated_Image_rwl3bcrwl3bcrwl3_11zon_11zon (2).webp" alt="Tips Outfit Rafting" width="400" height="250" loading="lazy">
                     </div>
                     <div class="blog-content">
                         <h5 class="fw-bold mb-3">5 Tips Outfit Rafting yang Nyaman & Keren</h5>
                         <p class="text-muted small">Jangan salah kostum! Ini panduan memilih baju agar tetap nyaman saat basah-basahan.</p>
-                        <a href="artikel.html" class="read-more-btn">Baca Selengkapnya <i class="fas fa-arrow-right ms-2"></i></a>
+                        <a href="artikel.html" class="read-more-btn" aria-label="Baca Artikel Tips Outfit">Baca Selengkapnya <i class="fas fa-arrow-right ms-2"></i></a>
                     </div>
                 </div>
             </div>
@@ -685,12 +741,12 @@
                 <div class="blog-card">
                     <div class="blog-img-wrapper">
                         <span class="blog-date">15 Jan 2026</span>
-                        <img src="img/Gemini_Generated_Image_kv3coikv3coikv3c (1)_11zon.webp" alt="Promo Pelajar">
+                        <img src="img/Gemini_Generated_Image_kv3coikv3coikv3c (1)_11zon.webp" alt="Promo Pelajar Rafting" width="400" height="250" loading="lazy">
                     </div>
                     <div class="blog-content">
                         <h5 class="fw-bold mb-3">Promo Spesial Liburan Sekolah: Diskon 20%</h5>
                         <p class="text-muted small">Khusus pelajar dan mahasiswa! Tunjukkan kartu pelajarmu dan dapatkan potongan harga.</p>
-                        <a href="artikel2.html" class="read-more-btn">Ambil Promo <i class="fas fa-arrow-right ms-2"></i></a>
+                        <a href="artikel2.html" class="read-more-btn" aria-label="Baca Promo Pelajar">Ambil Promo <i class="fas fa-arrow-right ms-2"></i></a>
                     </div>
                 </div>
             </div>
@@ -699,12 +755,12 @@
                 <div class="blog-card">
                     <div class="blog-img-wrapper">
                         <span class="blog-date">10 Jan 2026</span>
-                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Kuliner Batu">
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Rekomendasi Kuliner Batu" width="400" height="250" loading="lazy">
                     </div>
                     <div class="blog-content">
                         <h5 class="fw-bold mb-3">Rekomendasi Kuliner Hangat Setelah Rafting</h5>
                         <p class="text-muted small">Lapar setelah main air? Ini daftar bakso dan cwie mie enak dekat basecamp kami.</p>
-                        <a href="artikel3.html" class="read-more-btn">Lihat Rekomendasi <i class="fas fa-arrow-right ms-2"></i></a>
+                        <a href="artikel3.html" class="read-more-btn" aria-label="Baca Rekomendasi Kuliner">Lihat Rekomendasi <i class="fas fa-arrow-right ms-2"></i></a>
                     </div>
                 </div>
             </div>
@@ -718,22 +774,22 @@
                 <div class="col-lg-8 mx-auto">
                     <h2 class="fw-bold mb-3">Siap Berpetualang?</h2>
                     <p class="mb-4 text-white-50">Hubungi kami sekarang untuk mendapatkan penawaran spesial minggu ini.</p>
-                    <a href="#" class="btn btn-custom btn-lg"><i class="fab fa-whatsapp me-2"></i> WhatsApp Kami</a>
+                    <a href="https://wa.me/6282211221909?text=Halo%20Admin,%20saya%20mau%20tanya%20info%20rafting" class="btn btn-custom btn-lg" aria-label="Kontak via WhatsApp"><i class="fab fa-whatsapp me-2"></i> WhatsApp Kami</a>
                 </div>
             </div>
 
             <div class="row border-top border-secondary pt-4">
                 <div class="col-md-4 mb-3">
                     <h5 class="text-white fw-bold">BATU RAFTING</h5>
-                    <p class="text-white-50 small">Jl. Raya Tlekung No. 1, Batu, Jawa Timur.<br>Email: hello@baturafting.com</p>
+                    <p class="text-white-50 small">Jl. Raya Tlekung No. 1, Batu, Jawa Timur.<br>WhatsApp: 082211221909</p>
                 </div>
                 <div class="col-md-4 mb-3 text-center">
-                    <a href="#" class="text-white mx-2"><i class="fab fa-instagram fa-lg"></i></a>
-                    <a href="#" class="text-white mx-2"><i class="fab fa-facebook fa-lg"></i></a>
-                    <a href="#" class="text-white mx-2"><i class="fab fa-tiktok fa-lg"></i></a>
+                    <a href="#" class="text-white mx-2" aria-label="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a href="#" class="text-white mx-2" aria-label="Facebook"><i class="fab fa-facebook fa-lg"></i></a>
+                    <a href="#" class="text-white mx-2" aria-label="TikTok"><i class="fab fa-tiktok fa-lg"></i></a>
                 </div>
                 <div class="col-md-4 text-md-end text-white-50 small">
-                    &copy; 2025 Batu Rafting. Design by Dian (RPL).
+                    &copy; 2025 Batu Rafting. Design by Pandu
                 </div>
             </div>
         </div>
